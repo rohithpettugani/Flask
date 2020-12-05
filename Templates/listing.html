@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listing</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+<h1>This is detail page</h1>
+<table>
+  <tr>
+      <th>Item ID</th>
+    <th>Category</th>
+    <th>Item_Title</th>
+    <th>Item_Description</th>
+    <th>Item_Price</th>
+    <th>Item_Image</th>
+
+  </tr>
+{% for post in posts %}
+    <tr>
+        <td>{{post.id}}</td>
+        <td>{{post.Category}}</td>
+        <td>{{post.Item_Title}}</td>
+        <td>{{post.Item_Description}}</td>
+        <td>{{post.Item_Price}}</td>
+        <td><img src="{{post.image_file}}" alt="NO IMAGE" width="50" height="60"></td>
+
+    <tr>
+{% endfor %}
+
+</table>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input_item</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" action="">
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group">
+    <div class="form-group">
+            {{ form.Category.label(class = "form-control-label") }}
+            {{ form.Category}}
+        <br>
+            {{ form.Item_Title.label(class = "form-control-label") }}
+            {{ form.Item_Title(class = "form-control") }}
+            {{ form.Item_Description.label(class = "form-control-label") }}
+            {{ form.Item_Description(class = "form-control") }}
+            {{ form.Item_Price.label(class = "form-control-label") }}
+            {{ form.Item_Price(class = "form-control") }}
+            {{ form.Item_icon.label(class = "form-control-label") }}
+            {{ form.Item_icon(class = "form-control") }}
+    </div>
+    </fieldset>
+    {{ form.Save(class='btn btn-primary')}}
+    <br>
+    {% if errors %}
+    <div class="alert alert-danger" role="alert">
+        {% for error in errors %}
+        {{ error }}
+        <br>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+</form>
+</body>
+</html>
