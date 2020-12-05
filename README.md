@@ -6,7 +6,7 @@ A Sample Inventory Management Web Application made with Flask and SQLite
 1. Install Python 3.8.1
 2. Download this repository by using `git clone https://github.com/rohithpettugani/InventoryManager-Flask-.git`.
 3. (optional)create virtual enveronment by using python -m venv env and to work on virtual environment simply type command env\Scripts\acivate.bat
-4. Install the dependencies using pip install -r requirements.txt`.
+4. Install the dependencies using command `pip install -r requirements.txt`.
 5. Start the app using `python main.py`. 
 6. Visit [http://localhost:5000/](http://localhost:5000/) from your browser to access the app.
 
