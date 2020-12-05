@@ -11,7 +11,6 @@ app.config['SECRET_KEY'] = '1234567890123456'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
-
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     Category = db.Column(db.String(20), nullable=False)
