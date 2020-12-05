@@ -11,3 +11,6 @@ class InputForm(FlaskForm):
     Item_Price = IntegerField('Item_Price',validators=[DataRequired('price must be in integer only')])
     Item_icon = FileField('icon',validators = [FileAllowed(['jpg', 'png'], 'supported formats for icon are jpg and png only!')])
     Save = SubmitField('Save')
+
+
+# this is just for testing
